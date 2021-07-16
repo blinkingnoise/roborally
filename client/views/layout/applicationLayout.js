@@ -11,6 +11,10 @@ Template.applicationLayout.helpers({
     return user != null;
   },
   appVersion:  function () {
-    return Meteor.gitCommitHash;
+    var hash = Meteor.gitCommitHash;
+    if (typeof hash !== 'undefined' && hash)
+      return hash;
+    else
+      return 'development';
   }
 });

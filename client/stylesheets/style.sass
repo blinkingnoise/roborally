@@ -238,14 +238,21 @@ h5.player-status
 
 @keyframes fadeInAndOut
   0%, 50%, 100%
-    transition-timing-function: cubic-bezier(0, 1, 1, 0)
+    transition-timing-function: cubic-bezier(0.1, 0.5, 1, 0)
 
   0%
     transform: scale(0, 0)
-  50%
-    transform: scale(50, 50)
+    opacity: 1
+  30%
+    transform: scale(0.7, 0.7)
+    opacity: 1
   100%
-    transform: scale(100, 100)
+    transform: scale(1.2, 1.2)
+    opacity: 0
+
 
 .fadeInAndOut
-  animation: fadeInAndOut 1.75s both
+  animation-name: fadeInAndOut
+  animation-duration: 1.75s /* match to _ANNOUNCE_CARD_TIME in gamestate.js */
+  animation-fill-mode: both
+  animation-iteration-count: 1

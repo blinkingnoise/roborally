@@ -240,7 +240,8 @@ Template.board.helpers({
       priority: CardLogic.priority(cardId),
       type: CardLogic.cardType(cardId, game.playerCnt()).name,
       playerName: player.name,
-      position: cssPosition(player.position.x, player.position.y, 25, 25),
+      // offsets based on the size of &.announce-move in card.sass...
+      position: cssPosition(player.position.x, player.position.y, -25, -50),
       robotId: player.robotId.toString()
     };
 

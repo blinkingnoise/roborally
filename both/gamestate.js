@@ -26,7 +26,7 @@ GameState = {
 (function (scope) {
   var _NEXT_PHASE_DELAY = 250;
   var _ANNOUNCE_NEXT_PHASE = 1000;
-  var _ANNOUNCE_CARD_TIME = 1000;
+  var _ANNOUNCE_CARD_TIME = 1750; // match to .fadeInAndOut duration in style.sass
   var _EXECUTE_CARD_TIME = 1000;
 
   // game phases:
